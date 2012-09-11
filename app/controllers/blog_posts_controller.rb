@@ -6,7 +6,6 @@ class BlogPostsController < ApplicationController
   
   helper :blog
   
-  layout :choose_layout
   
   #l'utente deve aver fatto login
   before_filter :authenticate_user!, :except => [:index,:tag, :show]
@@ -26,6 +25,7 @@ class BlogPostsController < ApplicationController
   before_filter :setup_image_template, :only => [:new, :edit, :create, :update]
   
   
+  layout :choose_layout
   
   def index    
     @blog_posts = @blog.posts.published.paginate(:page => params[:page], :per_page => COMMENTS_PER_PAGE, :order => 'published_at DESC') if @blog
@@ -52,6 +52,7 @@ class BlogPostsController < ApplicationController
   
   def show
     @blog_post = @blog.posts.find(params[:id])
+    @user = @blog_post.user
     @page_title = @blog_post.title
     @blog_comment = @blog_post.blog_comments.new
     @blog_comments = @blog_post.blog_comments.includes(:user).paginate(:page => params[:page],:per_page => COMMENTS_PER_PAGE, :order => 'created_at DESC')
@@ -150,7 +151,7 @@ class BlogPostsController < ApplicationController
   end
   
   def choose_layout
-    'groups'
+    @group ? 'groups' : 'users'
   end
   
   def setup_image_template
