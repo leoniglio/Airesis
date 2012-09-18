@@ -20,7 +20,7 @@
 	                	<%else%>
 	                		<%=link_to_user comment.user %>
 	                	<%end%>
-	                </span> dice...
+	                </span> propone...
 	            </div>
 				<div id="flash_messages_comment_<%= comment.id %>" style="height:20px">
 					
@@ -43,9 +43,9 @@
 						:class => "deleteCommentLink",					
 						:id => "delete#{comment.id}"%>
                 <%end%>                               
-				<a href="#" onclick="openAnswer(this); return false;">Rispondi al contributo</a>
             </div>
         </div>
+        
      
      <script>     		
 	     	<%if (comment.collapsed) %>
@@ -56,18 +56,39 @@
 	    		hiding(event,<%= comment.id%>);	    	
 	   		});
 	   		
-	   		function openAnswer(el) {
-	   			if (!$(el).opened) {
-	   				console.log("not open");
-	   				$(el).opened = true;
-	   				answerPanel = $(el).answerPanel = $("<div>").append("<textarea>").addClass("proposal_comment");
-	   				$(el).parent().parent().parent().parent().append(answerPanel);
-	   			}
-	   			else {
-	   				$(el).opened = false;
-	   			}
-	   			
-	   		}
+	   		
      </script>
     </div>
+    <%countreplies = comment.replies.count%>
+    <%@lastreplies = comment.replies.paginate(:page => 1,:per_page => 5, :order => 'created_at DESC').reverse!%>
+    <%if countreplies > 5%>
+    <div id="<%=comment.id%>_show" class="show_all_comments">
+    	<%=link_to 'Mostra tutti i ' + countreplies.to_s + ' suggerimenti...', show_all_replies_proposal_proposal_comment_path(@proposal,comment), :remote => true%>
+    </div>
+    <%end%>
+    <div id="<%=comment.id%>_replies" style="display:none;">
+    </div>
+    <%= render :partial => 'proposals/reply', :collection => @lastreplies %>
+    <%if signed_in?%>
+    <div  class="proposal_comment_reply">
+    	<div id="<%=comment.id%>_reply_area_msg"></div>
+    	<%= form_for [@proposal,ProposalComment.new], :remote => true do |f| %>
+    	<div class="reply_img">
+    	<%if (@my_nickname && @proposal.is_current?)%>
+			<img src="http://www.gravatar.com/avatar/<%=Digest::MD5.hexdigest(@my_nickname.nickname)%>?s=32&d=identicon&r=PG"/>               	
+		<%else%>
+	        <%= current_user.user_image_tag(32) %>
+		<%end%>
+	    </div>    
+		<div class="reply_area">
+			<%= f.hidden_field :parent_proposal_comment_id, :value => comment.id%>
+			<%= f.text_area :content, :class => 'reply_textarea'%>
+        </div>
+        <div class="reply_button">
+        	<%=f.submit 'Rispondi', :class=>'buttonStyle littleText replyButton disableButton' %>
+        </div>
+        <div style="clear: both;"></div>
+        <%end%>
+    </div>
+    <%end%>
 </div>

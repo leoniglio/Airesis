@@ -3,9 +3,7 @@ class BlogPostsController < ApplicationController
   include NotificationHelper
   unloadable
   
-  
   helper :blog
-  
   
   #l'utente deve aver fatto login
   before_filter :authenticate_user!, :except => [:index,:tag, :show]
@@ -24,7 +22,6 @@ class BlogPostsController < ApplicationController
   #before_filter :require_admin, :except => [:index, :show, :tag]
   before_filter :setup_image_template, :only => [:new, :edit, :create, :update]
   
-  
   layout :choose_layout
   
   def index    
@@ -42,6 +39,8 @@ class BlogPostsController < ApplicationController
   
   
   def drafts
+    @page_title = @blog.title + " - post non pubblicati"
+    @user = @blog.user
     @blog_posts =  @blog.posts.drafts.paginate(:page => params[:page], :order => 'updated_at DESC')
     
     respond_to do |format|
