@@ -423,7 +423,7 @@ class GroupsController < ApplicationController
   private
 
   def choose_layout        
-      'groups'   
+      'groups-new'
   end
   
 

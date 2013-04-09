@@ -1,0 +1,326 @@
+body{
+    margin:0px; 
+    padding:0px;
+	font-family: "Lucida Grande", Lucida, Verdana, sans-serif;
+}
+
+/*  ---------------------------------------  MAIN-RIGHT */
+
+#menu-right{
+    position:fixed;
+    right:-16px;
+    width:264px;
+    height:100%;
+    background:#4b4b4b url(img/pw_maze_black.png);
+    font-size:14px;
+    overflow:hidden;
+}#menu-right .cont{
+    height:100%;
+    overflow:auto;
+}
+
+#menu-right #account {
+    position:relative;
+    height:60px;
+    padding-top:10px;
+}#menu-right #account img{
+    float:right;
+    margin-right:10px;
+    height:45px;
+    width:45px;
+    border-radius:5px;
+    border:2px solid rgba(255, 255, 255, 0.5);
+}#menu-right #account .span1{
+    position:absolute;
+    left:10px;
+    top:14px;
+    color:white;
+    width:300px;
+    text-align:left;
+    font-weight:bold;
+    width:180px;
+}#menu-right #account .span2{
+    position:absolute;
+    left:10px;
+    top:35px;
+    color:white;
+    font-size:12px;
+}#menu-right #account a{
+    color:white;
+    text-decoration:none;
+}
+
+
+#menu-right .box{
+    position:relative;
+    height:70px;
+}#menu-right .box .logo{
+    position:absolute;
+    right:0px;
+    width:45px;
+    height:45px;
+    background-color:#b2b2b2;
+    margin:10px;
+    margin-bottom:15px;
+    margin-right:13px;
+    border-radius:5px;
+    cursor:pointer;
+    border:1px solid #fff;
+}#menu-right .box .notify{
+    position:absolute;
+    left:182px;
+    padding:5px;
+    background-color:red;
+    border-radius:3px;
+    color:white;
+    font-weight:bold;
+    font-size:11px;
+    box-shadow:1px 1px 1px #000;
+    border:0px;
+}#menu-right .box .tit{
+    position:absolute;
+    top:18px;
+    left:10px;
+    right:80px;
+    color:white;
+    text-align:LEFT;
+}#menu-right .box .tit p{
+    margin:0px;
+}#menu-right .box .tit .p1{
+    color:white;
+    font-weight:bold;
+}#menu-right .box .tit .p2{
+    color:gray;
+    font-size:12px;
+    margin-top:3px;
+}
+
+#menu-right .sep{
+    margin-bottom:25px;
+    border-top:1px dotted #fff;
+    border-bottom:1px dotted #fff;
+    height:24px;
+    margin-bottom:10px;
+}#menu-right .sep p{
+    margin:0px;
+    padding:0px;
+    padding-top:5px;
+    padding-bottom:5px;
+    margin-right:1px;
+    color:white;
+    text-align:center;
+    font-weight:bold;
+    font-size:12px;
+    width:69px;
+    text-align:center;
+    float:right;
+}
+
+/*  ---------------------------------------  MENU-TOP */
+
+#menu-top{
+    position:fixed;
+    left:0px;
+    right:70px;
+    height:50px;
+    background-color:#33b5e5;
+    z-index:1;
+    box-shadow:0px 2px 3px #797979;
+}
+#menu-top a{
+    color:white;
+	text-decoration: none;
+}#menu-top a:hover{
+    color:black;
+}
+#menu-top .logo{
+    width:130px;
+    margin-top:7px;
+    margin-left:10px;
+}#menu-top .logo img{
+    height:34px;
+}
+#menu-top .sep1{
+    position:absolute;
+    left:140px;
+    bottom:8px;
+    top:8px;
+    border-left:1px dotted #fff;
+    width:1px;
+}#menu-top .sep2{
+    position:absolute;
+    left:400px;
+    bottom:8px;
+    top:8px;
+    border-left:1px dotted #fff;
+    width:1px;
+}
+
+#menu-top #menubut{
+    color:white;
+    font-size:13px;
+    font-weight:bold;
+    position:absolute;
+    left:155px;
+    top:10px;
+    padding:6px;
+}
+
+#menu-top .menu-search{
+    position:absolute;
+    padding:3px;
+    left:415px;
+    top:10px;
+}#menu-top .menu-search input[type="text"]{
+    border:0px;
+    padding:4px;
+    border-top-left-radius:3px;
+    border-bottom-left-radius:3px;
+    width:150px;
+    margin-left:5px;
+}
+#menu-top .menu-search input[type="submit"]{
+    position:absolute;
+    left:163px;
+    top:5px;
+    border:0px;
+    border-top-right-radius:3px;
+    border-bottom-right-radius:3px;
+    background:#fff url(img/cur-search.png) no-repeat center;
+    background-size:cover;
+    padding-left:5px;
+    padding-right:5px;
+    margin-left:-5px;
+    width:25px;
+    height:21px;
+    cursor:pointer;
+}#menu-top .menu-search input[type="submit"]:hover{
+}
+
+
+#menu-top #tolr{
+    position:absolute;
+    right:12px;
+    top:12px;
+}#menu-top #tolr img, #menu-top #logo .cur {
+    height:15px;
+    margin-left:2px;
+    padding:5px;
+    border:1px solid rgba(255, 255, 255, 0.2);
+    border-radius:5px;
+    background-color:rgba(255, 255, 255, 0.2);
+    cursor:pointer;
+}
+
+/*  ---------------------------------------  MAIN  */
+
+#main{
+    position:absolute;
+    top:0px;
+    left:0px;
+    right:70px;
+    background-color:white;
+    background:#f2f2f2 url("img/creampaper.png");
+    box-shadow:2px 0px 6px #898989;
+    overflow:auto;
+    min-width:10px;
+}
+
+/*  ---------------------------------------  MAIN HOME  */
+
+#main #home{
+    background-color:white;
+    padding:10px;
+/*
+    box-shadow:1px 0px 4px #8b8b8b;
+*/
+}#main #home img{
+    width:800px;
+    margin-top:40px;
+    margin-bottom:20px;
+}
+
+/*  ---------------------------------------  MAIN MENU2 */
+
+#main #menu2{
+    position:fixed;
+    width:200px;
+    right:0px;
+    top:0px;
+    bottom:0px;
+    background:#f2f2f2 url("img/creampaper.png");
+    box-shadow:-1px 0px 4px #939393;
+    padding-top:70px;
+    padding-left:15px;
+    padding-right:15px;
+    display:none;
+}#main p{
+    margin:0px;
+    background-color:silver;
+    padding-top:8px;
+    padding-bottom:8px;
+    padding-left:5px;
+    color:white;
+    margin-bottom:2px;
+}#main p span{
+    float:right;
+	width: 30px; 
+	height: 30px;; 
+    cursor:pointer;
+    background:url(img/cur.png) no-repeat center;
+    margin-top:-6px;
+    margin-right:5px
+}
+
+/* -------------------------------------------  QTIP  */
+
+.qtip-main{
+    max-width:250px;
+    border-radius:5px;
+    background:#33b5e5;
+    padding-bottom:9px;
+    box-shadow:0px 0px 5px #333;
+    border:2px solid rgba(255, 255, 255, 0.8);
+}.qtip-right{
+    max-width:250px;
+    border-radius:5px;
+    padding-bottom:9px;
+    box-shadow:0px 0px 5px #333;
+    max-width:700px;
+/*
+    border:1px solid rgba(255, 255, 255, 0.8);
+*/
+    color:black;
+    background-color:rgba(255, 255, 255, 0.8);
+}
+
+
+/* -------------------------------------------  MESS  */
+
+
+#cont-mess{
+    font-size:12px;
+}
+#cont-mess .mess{
+	line-height: 20px;
+    border:1px dotted silver;
+    margin-top:10px;
+    padding:10px;
+    background-color:white;
+}#cont-mess .p1{
+    font-size:14px;
+    margin:0px;
+    margin-top:0px;
+    font-weight:bold;
+    border-bottom:1px solid silver;
+    padding-bottom:5px;
+}#cont-mess .p2{
+    margin:0px;
+    margin-top:5px;
+    margin-bottom:10px;
+}#cont-mess .p3{
+    font-size:14px;
+    color:gray;
+    cursor:pointer;
+    margin:0px;
+}
