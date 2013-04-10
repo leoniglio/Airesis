@@ -6,6 +6,7 @@
 </head>
 <body>
 
+<%= render :partial => "layouts/menu-right" %>
 <%= render :partial => "layouts/header-new" %>
 <div id="subheader" class="ui-widget-header ui-state-default">
   <div class="body_maxwidth">
@@ -31,6 +32,41 @@
             <%= t('pages.groups.index.groups_list_2') %>
         <% end %>
       </h1>
+      <% if user_signed_in? %>
+          <div class="menu_element groups_menu_chrome">
+          <span>
+            <%= t('pages.header.groups') %>
+          </span>
+            <span class="ui-icon ui-icon-triangle-1-s" style="float: right;"></span>
+
+            <div class="groups_panel shadow-box hidden_panel" id="groups_panel">
+              <% @groups = current_user.groups %>
+              <% if @groups.empty? %>
+                  <%= t('pages.header.no_groups_yet') %>
+                  <br/>
+              <% else %>
+                  <% @groups.each do |group| %>
+                      <div class="groupcontainer">
+                        <div class="groupImg24" style="margin-right: 5px;">
+                          <%= group.group_image_tag(24) rescue nil %>
+                        </div>
+                        <div class="group">
+                          <%= link_to group.name, group %>
+                        </div>
+                      </div>
+                  <% end %>
+              <% end %>
+              <div style="clear:both;"></div>
+              <div class="menu-footer">
+                <%= link_to t('pages.top_panel.find_groups'), groups_path %>
+              </div>
+            </div>
+          </div>
+      <% else %>
+          <div class="menu_element">
+            <%= link_to t('pages.top_panel.find_groups'), groups_path %>
+          </div>
+      <% end %>
       <% if @group %>
           <% if @group.id %>
               <%= link_to t('pages.groups.layout.home_button'), @group, :class => 'homeButton buttonStyle' %>
