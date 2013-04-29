@@ -11,7 +11,7 @@ body{
     right:-16px;
     width:264px;
     height:100%;
-    background:#4b4b4b url(img/pattern/mochaGrunge.png);
+    background:#4b4b4b url(/assets/img/pattern/mochaGrunge.png);
     font-size:14px;
     overflow:hidden;
 }#menu-right .cont{
@@ -297,7 +297,7 @@ body{
     border:0px;
     border-top-right-radius:3px;
     border-bottom-right-radius:3px;
-    background:#fff url(img/cur-search.png) no-repeat center;
+    background:#fff url(/assets/img/cur-search.png) no-repeat center;
     background-size:cover;
     padding-left:5px;
     padding-right:5px;
@@ -451,7 +451,7 @@ body{
     min-width:10px;
 }
 #main #main-copy{
-    background:#f2f2f2 url("img/creampaper.png");
+    background:#f2f2f2 url("/assets/assets/img/creampaper.png");
     padding-top:80px;
     min-height:100%;
     padding-right:20px;
