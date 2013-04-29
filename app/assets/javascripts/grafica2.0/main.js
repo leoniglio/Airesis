@@ -61,7 +61,7 @@ $("#avatar").click(function () {
             $('#menu-right').animate({'width':'450px'},100);
             $('#mybox').hide();
             $('#account').show();
-            $('#account').load('page/account.html');
+            $('#account').load('/page/account.html');
             $(this).animate({
                 'height':'80px',
                 'width':'80px',
@@ -349,9 +349,9 @@ $('#tolr #curinfo').each(function(){
 $('#menu-right .box .logo').each(function(){
     $(this).qtip({
         content: {
-            text: '<img class="qtip-load" src="img/loading.gif"/>',
+            text: '<img class="qtip-load" src="/assets/img/loading.gif"/>',
             ajax: {
-                url: 'page/box/'+$(this).attr('box')+'.php',
+                url: '/page/box/'+$(this).attr('box')+'.php',
             }
         },
         position: {
@@ -383,9 +383,9 @@ $('#menu-right .box .logo').each(function(){
 
 $('#main .history').qtip({
     content: {
-            text: '<img class="qtip-load" src="img/loading.gif"/>',
+            text: '<img class="qtip-load" src="/assets/img/loading.gif"/>',
             ajax: {
-                url: 'page/history.php',
+                url: '/page/history.php',
                 type: 'POST',
                 data: {
                     id: '01'
@@ -480,7 +480,7 @@ $('#avatar').qtip({
     content: {
             text: 'Lorem ipsum dolor sit amet, consectetur adipisici elitLorem ipsum dolor sit amet',
             ajax: {
-                url: 'page/avatar.php',
+                url: '/page/avatar.php',
             }
     },
     position: {
