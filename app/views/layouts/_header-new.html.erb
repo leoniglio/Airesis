@@ -1,6 +1,6 @@
 <div id="menu-top">
   <div id="logo-airesis">
-    <%= link_to image_tag('img/logo.png', :align => "left", :alt => 'Airesis - Democrazia Diretta', :style => 'padding-top:2px; width:200px'), root_path %>
+    <%= link_to image_tag('img/logo.png', :align => "left", :alt => 'Airesis - Democrazia Diretta'), root_path %>
   </div>
   <div class="sep1"></div>
   <div id="menu-group">
@@ -9,7 +9,7 @@
           <%= @group.group_image_tag 40 %>
 
       <% else %>
-          <%= image_tag 'logo120.png', :width => 120, :alt => APP_LONG_NAME %>
+          <%= image_tag 'logo120.png', :width => 40, :alt => APP_LONG_NAME %>
       <% end %>
       <% if @group %>
           <% if @group.id %>
