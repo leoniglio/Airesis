@@ -1,0 +1,470 @@
+/*  ---------------------------------------  MENU-TOP */
+
+#menu-top{
+    position:fixed;
+    left:0px;
+    right:0px;
+    height:80px;
+    background-color:#33b5e5;
+    z-index:1;
+    box-shadow:0px 2px 3px #797979;
+    z-index:999;
+}
+#menu-top a{
+    color:white;
+	text-decoration: none;
+}#menu-top a:hover{
+    color:black;
+}
+#menu-top #logo-airesis{
+    position:absolute;
+    left:0px;
+    top:0px;
+    cursor:pointer;
+}#menu-top #logo-airesis img{
+    height:100%;
+}
+#menu-top .sep1{
+    position:absolute;
+    left:280px;
+    top:8px;
+    height:65px;
+    border-left:1px dotted rgba(255, 255, 255, 0.5);
+}
+
+#menu-top #logo-but{
+    position:absolute;
+    top:20px;
+    left:204px;
+    color:white;
+    font-weight:bold;
+    font-size:13px;
+    cursor:pointer;
+    border-radius:5px;
+    padding:5px;
+}#menu-top #logo-but:hover, #menu-top #logo-but.sel{
+    background-color:rgba(255, 255, 255, 0.2);
+}
+#menu-top #logo-but img{
+    height:10px;
+    width:14px;
+    margin-left:14px;
+    margin-top:3px;
+    border-radius:3px;
+    display:inherit;
+    padding:3px;
+    margin-bottom:3px;
+    background-color:rgba(255, 255, 255, 0.2);
+}
+
+#menu-top .group-cont{
+    position:relative;
+    height:130px;
+    top:80px;
+    padding-top:20px;
+    padding-bottom:20px;
+    color:white;
+    font-size:12px;
+    font-weight:bold;
+    display:none;
+    background-color:#55bde4;
+    border-top:1px dotted rgba(255, 255, 255, 0.2);
+    box-shadow:0px 2px 3px #797979;
+}#menu-top .group-cont .tria{
+    position:absolute;
+    top:-10px;
+    left:220px;
+    width: 0; 
+	height: 0; 
+	border-left: 12px solid transparent;
+	border-right: 12px solid transparent;
+	border-bottom: 10px solid #55bde4;
+}#menu-top .group-cont .group-cont-sep{
+    border-left:1px dotted rgba(255, 255, 255, 0.5);
+    position:absolute;
+    top:10px;
+    bottom:10px;
+    left:280px;
+}#menu-top .group-cont .group-tag{
+    float:left;
+    width:260px;
+    margin-top:10px;
+    text-align:right;
+}#menu-top .group-cont .tag{
+    cursor:pointer;
+    margin-bottom:20px;
+}#menu-top .group-cont .tag.sel span{
+    background-color:#fff;
+    padding:6px;
+    color:gray;
+    border-radius:20px;
+    padding-left:12px;
+    padding-right:12px;
+}
+#menu-top .group-cont .group-tag1{
+    margin-left:300px;
+    margin-right:10px;
+    height:100%;;
+    overflow:auto;
+}
+#menu-top .group-cont .group-tag1 .group-item{
+    margin-right:10px;
+    margin-bottom:15px;
+    float:left;
+    width:290px;
+}#menu-top .group-cont .group-tag1 .group-item img{
+    height:30px;
+    padding:4px;
+    background-color:white;
+    border-radius:5px;
+    margin-bottom:-21px;
+    margin-right:3px;
+    box-shadow:0px 0px 2px gray;
+}#menu-top .group-cont .group-tag1 .group-item .p1{
+    font-size:14px;
+}#menu-top .group-cont .group-tag1 .group-item .p2{
+    margin-top:3px;
+    margin-left:45px;
+    font-size:9px;
+}
+
+#menu-top #menu-group{
+    color:white;
+    font-size:13px;
+    font-weight:bold;
+    position:absolute;
+    left:280px;
+    margin-left:10px;
+    top:10px;
+    padding:6px;
+}#menu-top #menu-group img{
+    height:60px;
+    position:absolute;
+    margin-left:0px;
+    margin-top:-5px;
+}#menu-top #menu-group .tit{
+    position:absolute;
+    margin-top:2px;
+    margin-left:70px;
+    font-size:18px;
+}
+#menu-top #menu-group #submenu{
+    font-size:12px;
+    margin-top:10px;
+    color:white;
+    font-size:13px;
+    font-weight:bold;
+    margin-top:30px;
+    margin-left:70px;
+}
+
+#menu-top .menu-search{
+    position:absolute;
+    padding:3px;
+    left:415px;
+    top:10px;
+}#menu-top .menu-search input[type="text"]{
+    border:0px;
+    padding:4px;
+    border-top-left-radius:3px;
+    border-bottom-left-radius:3px;
+    width:150px;
+    margin-left:5px;
+}
+#menu-top .menu-search input[type="submit"]{
+    position:absolute;
+    left:163px;
+    top:5px;
+    border:0px;
+    border-top-right-radius:3px;
+    border-bottom-right-radius:3px;
+    background:#fff url(/img/cur-search.png) no-repeat center;
+    background-size:cover;
+    padding-left:5px;
+    padding-right:5px;
+    margin-left:-5px;
+    width:25px;
+    height:21px;
+    cursor:pointer;
+}#menu-top .menu-search input[type="submit"]:hover{
+}
+
+
+/*  ---------------------------------------  MENU-TOP-SLIM  */
+
+#menu-top.slim #menu-group{
+    color:white;
+    font-size:13px;
+    font-weight:bold;
+    position:absolute;
+    left:75px;
+    margin-left:10px;
+    top:10px;
+    padding:6px;
+}
+#menu-top.slim .logo2,
+#menu-top.slim .group,
+#menu-top.slim .sep1{
+    display:none;
+}
+#menu-top.slim .group-cont .tria{
+ left:31px;   
+}
+
+
+/*  ---------------------------------------  TOLR  */
+
+#menu-top #tolr{
+    position:absolute;
+    right:10px;
+    top:12px;
+}#menu-top #tolr img{
+    height:15px;
+    margin-left:2px;
+    padding:5px;
+    border:1px solid rgba(255, 255, 255, 0.2);
+    border-radius:5px;
+    background-color:rgba(255, 255, 255, 0.2);
+    cursor:pointer;
+}#menu-top #tolr .notify {
+    position:absolute;
+    background-color:rgba(255, 0, 0, 0.9);
+    font-size:11px;
+    font-weight:bold;
+    padding:2px;
+    padding-left:5px;
+    padding-right:5px;
+    padding-bottom:3px;
+    margin-top:-8px;
+    margin-left:0px;
+    border-radius:3px;
+    color:white;
+}
+
+
+/*  ---------------------------------------  MENU-RIGHT */
+
+#menu-right{
+    position:fixed;
+    right:0px;
+    width:85px;
+    height:100%;
+    background:#4b4b4b url(/img/pattern/grid.png);
+    font-size:14px;
+    overflow:hidden;
+}#menu-right .cont{
+    height:100%;
+    overflow:auto;
+}
+#menu-right ::-webkit-scrollbar {
+    width: 0px;
+}
+
+
+/*  ---------------------------------------  ACCOUNT  */
+
+#menu-right #account {
+    height:60px;
+    padding-top:10px;
+    color:white;
+    display:none;
+}#menu-right #avatar{
+    position:absolute;
+    top:10px;
+    right:10px;
+    height:55px;
+    width:55px;
+    border-radius:5px;
+    border:2px solid rgba(255, 255, 255, 0.5);
+    border:1px solid #939393;
+    cursor:pointer;
+    z-index:999;
+}
+
+
+/*  ---------------------------------------  #SUGGEST */
+
+#menu-right #suggest{
+    position:absolute;
+    top:83px;
+    bottom:0px;
+    background-color:#fff;
+    display:none;
+    overflow:auto;
+    color:black;
+    margin-bottom:-25px;
+    z-index:999;
+    box-shadow:2px 0px 2px #333;
+    margin-top:82px;
+}#menu-right #suggest .mycomment{
+    border:1px dotted gray;
+    background-color:#e8e8e8;
+    margin-bottom:0px;
+    padding-top:10px;
+    margin-left:10px;
+    margin-right:10px;
+    margin-top:10px;
+}#menu-right #suggest .mycomment .comment-tit{
+    margin:10px;
+}#menu-right #suggest .mycomment .txtarea{
+    margin-right:20px;
+}#menu-right #suggest .mycomment textarea{
+    width:100%;
+    height:100px;
+    resize:vertical;
+    margin-left:10px;
+    margin-top:10px;
+    padding:5px;
+    font-size:12px;
+}#menu-right #suggest .mycomment .tool{
+    height:25px;
+    margin:10px;
+    background-color:rgba(255, 255, 255, 0.5);
+    padding:5px;
+}#menu-right #suggest .mycomment button{
+    float:right;
+    padding:5px;
+    padding-left:10px;
+    padding-right:10px;
+    margin:0px;
+    height:100%;
+    font-size:11px;
+    border-radius:2px;
+    border:0px;
+    background-color:silver;
+    color:white;
+    cursor:pointer;
+    font-weight:bold;
+    border-radius:3px;
+}#menu-right #suggest .mycomment button img{
+    display:inline-block;
+    height:20px;
+    margin-bottom:-6px;
+    margin-top:-3px;
+    margin-right:-5px;
+    margin-left:5px;
+}#menu-right #suggest .comment{
+    padding:10px;
+}.comment .comment1{
+    position:relative;
+    border:1px dotted gray;
+    padding:8px;
+    background-color:#e8e8e8;
+    margin-bottom:10px;
+}.comment .comment1 img{
+    position:absolute;
+    height:40px;
+    width:40px;
+    border-radius:3px;
+    box-shadow:0px 0px 1px #000;
+}.comment .comment1 .username{
+    margin-left:50px;
+    font-weight:bold;
+    font-size:14px;
+}.comment .comment1 .date{
+    position:absolute;
+    left:48px;
+    font-size:11px;
+    color:gray;
+    margin-left:10px;
+    margin-top:20px;
+}.comment .comment1 p{
+    margin-top:30px;
+    font-size:14px;
+}#menu-right #suggest .comment1 .tool{
+    background-color:rgba(255, 255, 255, 0.5);
+    padding:5px;
+    margin-left:0px;
+    margin-right:0px;
+}
+
+
+/*  ---------------------------------------  MYBOX  */
+
+#menu-right #mybox{
+    color:white;
+    margin-top:75px;
+}#menu-right #mybox .box{
+    position:relative;
+    height:70px;
+    margin:8px;
+}#menu-right #mybox .box .logo{
+    position:absolute;
+    right:0px;
+    width:50px;
+    height:50px;
+    margin:10px;
+    margin-right:10px;
+    margin-bottom:15px;
+    border-radius:5px;
+    cursor:pointer;
+    border:1px solid #888;
+}
+
+#menu-right #avatar:hover,
+#menu-right #mybox .box .logo:hover{
+    box-shadow:0px 0px 2px #000;
+}
+
+#menu-right #mybox .box .notify{
+    position:absolute;
+    right:-10px;
+    top:-10px;
+    padding:5px;
+    background-color:rgba(255, 0, 0, 0.9);
+    border-radius:3px;
+    color:white;
+    font-weight:bold;
+    font-size:11px;
+    box-shadow:-1px 1px 1px #000;
+    border:0px;
+    z-index:998;
+}#menu-right #mybox .box .tria{
+/*
+    position:absolute;
+    top:10px;
+    left:-8px;
+    width: 0; 
+	height: 0; 
+	border-top: 15px solid transparent;
+	border-bottom: 15px solid transparent; 
+	border-left:15px solid #fff;
+    box-shadow:0px 0px 1px gray;
+*/
+}#menu-right #mybox .box .tit{
+    position:absolute;
+    top:15px;
+    left:10px;
+    right:80px;
+    text-align:left;
+}#menu-right #mybox .box .tit p{
+    margin:0px;
+    display:inline-block;
+}#menu-right .box .tit .p1{
+    font-weight:bold;
+    font-size:16;
+    width:40%;
+    min-width:150px;
+}
+#menu-right #mybox .sep{
+    border-top:1px dotted #fff;
+    border-bottom:1px dotted #fff;
+    height:24px;
+    margin-top:0px;
+    margin-bottom:0px;
+    margin-right:0px;
+    background-color:rgba(255, 255, 255, 0.2);
+}#menu-right #mybox .sep p{
+    margin:0px;
+    padding:0px;
+    padding-top:5px;
+    padding-bottom:5px;
+    margin-right:0px;
+    text-align:center;
+    font-weight:bold;
+    font-size:12px;
+    text-align:center;
+    float:right;
+    width:100%;
+}
+

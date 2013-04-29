@@ -1,18 +1,26 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 
+<!-- JQUERY -->
+<%= javascript_include_tag 'grafica2.0/jquery-1.9.1.min' %>
+
+<!--QTIP-->
+<%= javascript_include_tag 'qtip/jquery.qtip' %>
+<%= stylesheet_link_tag 'qtip/jquery.qtip.min' %>
+<%= stylesheet_link_tag 'qtip/jquery-ui' %>
+
+
+<!-- ICON -->
+<link rel="stylesheet" href="http://jquery-ui.googlecode.com/svn/tags/1.6rc5/themes/base/ui.core.css" type="text/css" />
+<link rel="stylesheet" href="http://jquery-ui.googlecode.com/svn/tags/1.6rc5/themes/base/ui.theme.css" type="text/css" />
 
 <!-- JS -->
-
-
-<%= javascript_include_tag 'grafica2.0/jquery.min' %>
-<%= javascript_include_tag 'grafica2.0/jquery-migrate-1.0.0' %>
-<%= javascript_include_tag 'qtip/jquery.qtip.min' %>
-
 <%= javascript_include_tag 'grafica2.0/main' %>
 
 <!-- CSS -->
+<%= stylesheet_link_tag 'grafica2.0/menu' %>
 <%= stylesheet_link_tag 'grafica2.0/style' %>
-<%= stylesheet_link_tag 'qtip/jquery.qtip.min' %>
+
+
 
 <%= csrf_meta_tag %>
 <%= yield :head %>

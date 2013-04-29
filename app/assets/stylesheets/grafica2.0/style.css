@@ -11,21 +11,26 @@ body{
     right:-16px;
     width:264px;
     height:100%;
-    background:#4b4b4b url(img/pw_maze_black.png);
+    background:#4b4b4b url(img/pattern/mochaGrunge.png);
     font-size:14px;
     overflow:hidden;
 }#menu-right .cont{
     height:100%;
     overflow:auto;
+    
+}#menu-right ::-webkit-scrollbar {
+    width: 0px;
 }
 
 #menu-right #account {
     position:relative;
     height:60px;
     padding-top:10px;
+    color:white;
+    height:70px;
 }#menu-right #account img{
     float:right;
-    margin-right:10px;
+    margin-right:27px;
     height:45px;
     width:45px;
     border-radius:5px;
@@ -34,7 +39,6 @@ body{
     position:absolute;
     left:10px;
     top:14px;
-    color:white;
     width:300px;
     text-align:left;
     font-weight:bold;
@@ -43,7 +47,6 @@ body{
     position:absolute;
     left:10px;
     top:35px;
-    color:white;
     font-size:12px;
 }#menu-right #account a{
     color:white;
@@ -51,12 +54,15 @@ body{
 }
 
 
-#menu-right .box{
+#menu-right #mybox{
+    color:white;
+}
+#menu-right #mybox .box{
     position:relative;
     height:70px;
-}#menu-right .box .logo{
+}#menu-right #mybox .box .logo{
     position:absolute;
-    right:0px;
+    right:15px;
     width:45px;
     height:45px;
     background-color:#b2b2b2;
@@ -66,48 +72,46 @@ body{
     border-radius:5px;
     cursor:pointer;
     border:1px solid #fff;
-}#menu-right .box .notify{
+}#menu-right #mybox .box .notify{
     position:absolute;
     left:182px;
     padding:5px;
-    background-color:red;
+    background-color:rgba(255, 0, 0, 0.9);
     border-radius:3px;
     color:white;
     font-weight:bold;
     font-size:11px;
     box-shadow:1px 1px 1px #000;
     border:0px;
-}#menu-right .box .tit{
+}#menu-right #mybox .box .tit{
     position:absolute;
     top:18px;
     left:10px;
     right:80px;
-    color:white;
     text-align:LEFT;
-}#menu-right .box .tit p{
+}#menu-right #mybox .box .tit p{
     margin:0px;
 }#menu-right .box .tit .p1{
-    color:white;
     font-weight:bold;
-}#menu-right .box .tit .p2{
-    color:gray;
+}#menu-right #mybox .box .tit .p2{
+    color:white;
     font-size:12px;
     margin-top:3px;
 }
 
-#menu-right .sep{
+#menu-right #mybox .sep{
     margin-bottom:25px;
     border-top:1px dotted #fff;
     border-bottom:1px dotted #fff;
     height:24px;
     margin-bottom:10px;
-}#menu-right .sep p{
+    margin-right:14px;
+}#menu-right #mybox .sep p{
     margin:0px;
     padding:0px;
     padding-top:5px;
     padding-bottom:5px;
-    margin-right:1px;
-    color:white;
+    margin-right:0px;
     text-align:center;
     font-weight:bold;
     font-size:12px;
@@ -122,7 +126,7 @@ body{
     position:fixed;
     left:0px;
     right:70px;
-    height:50px;
+    height:80px;
     background-color:#33b5e5;
     z-index:1;
     box-shadow:0px 2px 3px #797979;
@@ -134,36 +138,143 @@ body{
     color:black;
 }
 #menu-top .logo{
-    width:130px;
-    margin-top:7px;
-    margin-left:10px;
+    position:absolute;
+    left:20px;
+    top:18px;
 }#menu-top .logo img{
-    height:34px;
+    height:40px;
 }
 #menu-top .sep1{
     position:absolute;
-    left:140px;
+    left:300px;
     bottom:8px;
     top:8px;
-    border-left:1px dotted #fff;
-    width:1px;
+    border-left:1px dotted rgba(255, 255, 255, 0.5);
 }#menu-top .sep2{
     position:absolute;
-    left:400px;
-    bottom:8px;
+    left:170px;
     top:8px;
-    border-left:1px dotted #fff;
-    width:1px;
+    height:65px;
+    border-left:1px dotted rgba(255, 255, 255, 0.5);
+}
+#menu-top .group{
+    position:absolute;
+    top:25px;
+    color:white;
+    left:188px;
+    font-weight:bold;
+    font-size:14px;
+    cursor:pointer;
+    padding:10px;
+    border-radius:5px;
+}#menu-top .group:hover{
+    background-color:rgba(255, 255, 255, 0.2);
+}
+#menu-top .group img{
+    height:8px;
+    margin-left:1px;
+    margin-bottom:-3px;
+    padding:3px;
+    border-radius:3px;
+    background-color:rgba(255, 255, 255, 0.2);
+    border:1px solid rgba(255, 255, 255, 0.2);
 }
 
-#menu-top #menubut{
+#menu-top .group-cont{
+    position:relative;
+    top:82px;
+    color:white;
+    font-size:12px;
+    font-weight:bold;
+    display:none;
+}#menu-top .group-cont .group-cont-sep{
+    border-bottom:1px dotted rgba(255, 255, 255, 0.5);
+    margin-bottom:20px;
+    margin-left:10px;
+    margin-right:10px;
+}#menu-top .group-cont .group-tag{
+    float:left;
+    width:280px;
+    margin-top:10px;
+    text-align:right;
+}#menu-top .group-cont .tag{
+    cursor:pointer;
+    margin-bottom:20px;
+}#menu-top .group-cont .tag.sel span{
+    background-color:#fff;
+    padding:6px;
+    color:gray;
+    border-radius:20px;
+    padding-left:12px;
+    padding-right:12px;
+}#menu-top .group-cont .tag.sel .tria{
+/*
+    float:right;
+    margin-top:-7px;
+    margin-left:-2px;
+    width: 0; 
+	height: 0; 
+	border-top: 14px solid transparent;
+	border-bottom: 15px solid transparent;
+	border-left: 12px solid white;
+*/
+}
+
+#menu-top .group-cont .group-tag1{
+    margin-left:320px;
+    margin-right:10px;
+    height:160px;
+    overflow:auto;
+}
+#menu-top .group-cont .group-tag1 .group-item{
+    margin-right:10px;
+    margin-bottom:15px;
+    float:left;
+    width:290px;
+}#menu-top .group-cont .group-tag1 .group-item img{
+    height:30px;
+    padding:4px;
+    background-color:white;
+    border-radius:5px;
+    margin-bottom:-21px;
+    margin-right:3px;
+    box-shadow:0px 0px 2px gray;
+}#menu-top .group-cont .group-tag1 .group-item .p1{
+    font-size:14px;
+}#menu-top .group-cont .group-tag1 .group-item .p2{
+    margin-top:3px;
+    margin-left:45px;
+    font-size:9px;
+}
+
+#menu-top #menu-group{
     color:white;
     font-size:13px;
     font-weight:bold;
     position:absolute;
-    left:155px;
+    left:300px;
+    margin-left:10px;
     top:10px;
     padding:6px;
+}#menu-top #menu-group img{
+    height:60px;
+    position:absolute;
+    margin-left:0px;
+    margin-top:-5px;
+}#menu-top #menu-group .tit{
+    position:absolute;
+    margin-top:2px;
+    margin-left:70px;
+    font-size:18px;
+}
+#menu-top #menu-group #submenu{
+    font-size:12px;
+    margin-top:10px;
+    color:white;
+    font-size:11px;
+    font-weight:bold;
+    margin-top:30px;
+    margin-left:70px;
 }
 
 #menu-top .menu-search{
@@ -197,12 +308,13 @@ body{
 }#menu-top .menu-search input[type="submit"]:hover{
 }
 
+/*  ---------------------------------------  TOLR  */
 
 #menu-top #tolr{
     position:absolute;
-    right:12px;
+    right:10px;
     top:12px;
-}#menu-top #tolr img, #menu-top #logo .cur {
+}#menu-top #tolr img{
     height:15px;
     margin-left:2px;
     padding:5px;
@@ -210,88 +322,42 @@ body{
     border-radius:5px;
     background-color:rgba(255, 255, 255, 0.2);
     cursor:pointer;
-}
-
-/*  ---------------------------------------  MAIN  */
-
-#main{
+}#menu-top #tolr .notify {
     position:absolute;
-    top:0px;
-    left:0px;
-    right:70px;
-    background-color:white;
-    background:#f2f2f2 url("img/creampaper.png");
-    box-shadow:2px 0px 6px #898989;
-    overflow:auto;
-    min-width:10px;
-}
-
-/*  ---------------------------------------  MAIN HOME  */
-
-#main #home{
-    background-color:white;
-    padding:10px;
-/*
-    box-shadow:1px 0px 4px #8b8b8b;
-*/
-}#main #home img{
-    width:800px;
-    margin-top:40px;
-    margin-bottom:20px;
-}
-
-/*  ---------------------------------------  MAIN MENU2 */
-
-#main #menu2{
-    position:fixed;
-    width:200px;
-    right:0px;
-    top:0px;
-    bottom:0px;
-    background:#f2f2f2 url("img/creampaper.png");
-    box-shadow:-1px 0px 4px #939393;
-    padding-top:70px;
-    padding-left:15px;
-    padding-right:15px;
-    display:none;
-}#main p{
-    margin:0px;
-    background-color:silver;
-    padding-top:8px;
-    padding-bottom:8px;
+    background-color:rgba(255, 0, 0, 0.9);
+    font-size:11px;
+    font-weight:bold;
+    padding:2px;
     padding-left:5px;
+    padding-right:5px;
+    padding-bottom:3px;
+    margin-top:-8px;
+    margin-left:0px;
+    border-radius:3px;
     color:white;
-    margin-bottom:2px;
-}#main p span{
-    float:right;
-	width: 30px; 
-	height: 30px;; 
-    cursor:pointer;
-    background:url(img/cur.png) no-repeat center;
-    margin-top:-6px;
-    margin-right:5px
 }
+
 
 /* -------------------------------------------  QTIP  */
-
+.qtip-load{
+    height:30px;
+    margin-left:2px;
+    margin-top:6px;
+    margin-right:2px;
+}
 .qtip-main{
-    max-width:250px;
+    padding:0px;
     border-radius:5px;
     background:#33b5e5;
-    padding-bottom:9px;
     box-shadow:0px 0px 5px #333;
-    border:2px solid rgba(255, 255, 255, 0.8);
+    border:2px solid rgba(255, 255, 255, 0.9);
 }.qtip-right{
-    max-width:250px;
     border-radius:5px;
     padding-bottom:9px;
     box-shadow:0px 0px 5px #333;
     max-width:700px;
-/*
-    border:1px solid rgba(255, 255, 255, 0.8);
-*/
     color:black;
-    background-color:rgba(255, 255, 255, 0.8);
+    background-color:rgba(255, 255, 255, 0.9);
 }
 
 
@@ -299,16 +365,49 @@ body{
 
 
 #cont-mess{
+    width:250px;
+    font-size:12px;
+}
+
+#cont-mess ::-webkit-scrollbar, 
+#menu-top ::-webkit-scrollbar{
+    width: 8px;
+}#cont-mess ::-webkit-scrollbar-track,
+#menu-top ::-webkit-scrollbar-track{
+    -webkit-box-shadow: inset 0 0 0px rgb(0, 0, 0); 
+    border-radius: 10px;
+}#cont-mess ::-webkit-scrollbar-thumb,
+#menu-top ::-webkit-scrollbar-thumb{
+    background-color:rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(255, 255, 255, 0); 
+}
+
+#cont-mess a{
+    text-decoration:none;
+    color:black;
+}#cont-mess a:hover{
+    text-decoration:underline;
+}
+#cont-mess .cont1{
+    max-height:400px;
+    overflow:auto;
+    padding-right:0px;
+    margin-bottom:10px;
+    margin-top:5px;
     font-size:12px;
 }
 #cont-mess .mess{
 	line-height: 20px;
     border:1px dotted silver;
-    margin-top:10px;
+    margin-bottom:10px;
     padding:10px;
     background-color:white;
+    cursor:pointer;
+}#cont-mess .mess img{
+	height:30px;
+    position:absolute;
 }#cont-mess .p1{
-    font-size:14px;
     margin:0px;
     margin-top:0px;
     font-weight:bold;
@@ -319,8 +418,402 @@ body{
     margin-top:5px;
     margin-bottom:10px;
 }#cont-mess .p3{
-    font-size:14px;
     color:gray;
     cursor:pointer;
     margin:0px;
+    padding-top:5px;
+    border-top:1px solid silver;
+}#cont-mess .p3 a{
+    color:gray;
+}#cont-mess .pinfo{
+    margin-left:50px;
 }
+#cont-mess .allmess .mess{
+    background-color:rgba(255, 255, 255, 0.3);
+    padding-top:5px;
+    color:#fff;
+    padding-bottom:5px;
+    text-align:center;
+    font-weight:bold;
+}#cont-mess .allmess:hover{
+    text-decoration:none;
+}
+
+
+/*  ---------------------------------------  MAIN  */
+
+#main{
+    position:absolute;
+    top:0px;
+    left:0px;
+    right:70px;
+    bottom:0px;
+    min-width:10px;
+}
+#main #main-copy{
+    background:#f2f2f2 url("img/creampaper.png");
+    padding-top:80px;
+    min-height:100%;
+    padding-right:20px;
+    padding-bottom:20px;
+    box-shadow:1px 0px 5px #000;
+}
+
+#main #main-copy #groups_leftpanel{
+    float:left;
+    width:300px;
+    padding-top:20px;
+}
+#main #main-copy #main1{
+    margin-left:300px;
+    padding-left:20px;
+    border-left:1px dotted gray;
+}
+
+
+
+#main .proposalTitle{
+    margin-right:0px;
+    font-size:25px;
+}
+
+
+#main .proposal_main{
+    background-color:rgba(255, 255, 255, 0.5);
+    padding:10px;
+    border-radius:3px;
+    box-shadow:0px 0px 1px #000;
+}
+
+#main #new_proposal_comment{
+    margin-top:20px;
+}
+#main textarea{
+    width:100%;
+    resize:vertical;
+    background-color:rgba(255, 255, 255, 0.5);
+    box-shadow:0px 0px 1px #000;
+    border:0px;
+    border-radius:3px;
+    margin-top:10px;
+    padding:8px;
+    font-size:14px;
+    height:120px;
+}
+#main #new_proposal_comment button{
+    color:#fff;
+    padding-top:6px;
+    padding-bottom:8px;
+    padding-left:15px;
+    padding-right:15px;
+    font-size:12px;
+    font-weight:bold;
+    border:1px solid #098bb5;
+	background: -webkit-gradient(linear, left top, left bottom, from(#a6daeb), to(#2fbeed));
+    border-radius:5px;
+    cursor:pointer;
+    margin-top:10px;
+    margin-bottom:20px;
+}#main #new_proposal_comment button{
+    color:#fff;
+    border:1px solid #098bb5;
+	background: -webkit-gradient(linear, left top, left bottom, from(#2fbeed), to(#a6daeb));
+}
+
+input[type=submit]{
+    border:0px;
+    background-color:transparent;
+    color:white;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+#main .loading{
+/*
+    display:none;
+*/
+    height:20px;
+    margin:0px;
+    margin-bottom:-6px;
+    margin-left:5px;
+    margin-right:-5px;
+}
+
+
+
+#main  #groups_leftpanel .rankleftpanel, #main #groups_leftpanel .myshare, #main #groups_leftpanel .menu2{
+    margin-bottom:10px;
+    border:1px solid silver;
+    border-radius:5px;
+    background-color:rgba(255, 255, 255, 1);
+    padding:10px;
+    margin-right:20px;
+    margin-left:20px;
+}
+#main .littleText{
+    margin:0px;
+    padding:0px;
+    font-size:20px;
+    font-weight:bold;
+}
+#main .rightAlign{
+    font-size:23px;
+    font-weight:bold;
+    color:#de7c09;
+}#main .ranking{
+    margin-bottom:10px;
+}
+#main .myshare{
+    height:20px;
+}#main .myshare div{
+    display:inline-block;
+}#main .myshare img{
+    margin-left:-5px;
+    margin-top:-8px;
+}
+
+#main .suggest{
+    float:right;
+    font-size:11px;
+    padding:6px;
+    padding-left:35px;
+    padding-right:10px;
+    color:gray;
+    background-color:rgba(255, 255, 255, 0.5);
+    box-shadow:0px 0px 1px #000;
+    border-radius:20px;
+    cursor:pointer;
+    z-index:999;
+}#main .suggest:hover {
+    color:#fff;
+    background-color:#a2a2a2;
+}#main .suggest.sel {
+    color:#fff;
+    background-color:#a2a2a2;
+    padding:10px;
+    margin-top:-5px;
+    margin-right:-20px;
+    border-bottom-right-radius:0px;
+    border-top-right-radius:0px;
+    border-bottom-left-radius:20px;
+    border-top-left-radius:20px;
+    padding-left:36px;
+    padding-right:30px;
+}#main .suggest .tria{
+    position:absolute;
+    right:-7px;
+    margin-top:-26px;
+    height:38px;
+    width:20px;
+    display:none;
+}#main .suggest .cur{
+    position:absolute;
+    height:21px;
+    width:18px;
+    margin-top:-4px;
+    margin-left:-29px;
+    border-right:1px dotted gray;
+    padding-right:5px;
+}
+
+#menu-right #suggest{
+    position:absolute;
+    top:82px;
+    bottom:0px;
+    width:100%;
+    background-color:#fff;
+    display:none;
+    overflow:auto;
+    color:black
+}#menu-right #suggest .mycomment{
+    margin:10px;
+    width:230px;;
+    border:1px dotted gray;
+    background-color:#e8e8e8;
+    margin-bottom:0px;
+    padding-top:10px;
+}#menu-right #suggest .comment-tit{
+    margin:10px;
+}#menu-right #suggest textarea{
+    width:210px;;
+    height:150px;
+    resize:vertical;
+    margin-left:10px;
+    margin-top:10px;
+    padding:5px;
+    font-size:12px;
+}#menu-right #suggest .tool{
+    width:200px;
+    height:25px;
+    margin:10px;
+    margin-right:24px;
+    margin-top:5px;
+    background-color:rgba(255, 255, 255, 0.5);
+    padding:5px;
+}#menu-right #suggest button{
+    float:right;
+    padding:5px;
+    padding-left:10px;
+    padding-right:10px;
+    margin:0px;
+    height:100%;
+    font-size:11px;
+    border-radius:2px;
+    border:0px;
+    background-color:silver;
+    color:white;
+    cursor:pointer;
+}#menu-right #suggest .comment{
+    width:230px;;
+    padding:10px;
+}.comment .comment1{
+    position:relative;
+    border:1px dotted gray;
+    padding:8px;
+    background-color:#e8e8e8;
+    margin-bottom:10px;
+}.comment .comment1 img{
+    position:absolute;
+    height:40px;
+    width:40px;
+    border-radius:3px;
+    box-shadow:0px 0px 1px #000;
+}.comment .comment1 .username{
+    margin-left:50px;
+    font-weight:bold;
+    font-size:14px;
+}.comment .comment1 .date{
+    position:absolute;
+    left:48px;
+    font-size:11px;
+    color:gray;
+    margin-left:10px;
+    margin-top:20px;
+}.comment .comment1 p{
+    margin-top:30px;
+    font-size:14px;
+}
+
+
+
+
+#main #proposalCommentsContainer{
+    margin-top:10px;
+}#main #proposalCommentsContainer > .comment1{
+    background-color:rgba(255, 255, 255, 0.5);
+}#main #proposalCommentsContainer > .comment1 > p{
+    margin-right:40px;
+    padding-top:0px;
+    text-align:left;
+    min-height:30px;
+    min-height:0px;
+}
+#main #proposalCommentsContainer .comment1 .vote{
+    margin-bottom:-10px;
+}#main #proposalCommentsContainer .comment1 .vote img{
+    position:relative;
+    float:left;
+    height:15px;
+    width:15px;
+    margin:0px;
+    padding:0px;
+    background-color:silver;
+    padding:2px;
+    margin:3px;
+    border-radius:0px;
+    cursor:pointer;
+}#main #proposalCommentsContainer .comment1 .vote button{
+    background-color:silver;
+    border:0px;
+    color:white;
+    margin:3px;
+    margin-top:2px;
+    font-size:10px;
+    font-weight:bold;
+    height:21px;
+    border-radius:2px;
+    cursor:pointer;
+}#main #proposalCommentsContainer .comment1 .vote button.segnala{
+    float:right;
+}#main #proposalCommentsContainer .comment1 .vote img:hover,
+#main #proposalCommentsContainer .comment1 .vote button:hover{
+    background-color:gray;
+}
+
+#main #proposalCommentsContainer .comment1 .tool{
+    background-color:#e8e8e8;
+    margin-left:50px;
+    margin-bottom:10px;
+    padding:10px;
+    padding-bottom:18px;
+}#main #proposalCommentsContainer .comment1 .tool .recomment{
+    margin-top:18px;
+    margin-bottom:-10px;
+    display:none;
+}#main #proposalCommentsContainer .comment1 .tool .recomment img{
+    position:absolute;
+    left:70px;
+    margin-top:0px;
+}#main #proposalCommentsContainer .comment1 .tool .txtarea{
+    margin-left:50px;
+    margin-right:103px;
+}#main #proposalCommentsContainer .comment1 .tool .txtarea textarea{
+    height:40px;
+    margin:0px;
+    margin-top:0px;
+    padding:0px;
+    padding:4px;
+    padding-left:6px;
+    font-size:12px;
+}#main #proposalCommentsContainer > .comment1 .tool .recomment button{
+    position:absolute;
+    right:20px;
+    height:40px;
+    width:90px;
+    border-radius:5px;
+    color:gray;
+    background-color:rgba(255, 255, 255, 0.5);
+    border:0px;
+    box-shadow:0px 0px 1px #000;
+    font-weight:bold;
+}
+
+#main #proposalCommentsContainer .comment1 .date{
+    position:inherit;
+    left:0px;
+    font-size:11px;
+    color:gray;
+    margin-left:0px;
+    margin-top:0px;
+}#main #proposalCommentsContainer .comment1 p{
+    margin-left:50px;
+    margin-top:5px;
+    font-size:14px;
+}#main #proposalCommentsContainer .reply{
+    border:0px;
+}#main #proposalCommentsContainer .reply .comment1{
+    margin-left:50px;
+    margin-top:10px;
+    border:0px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
