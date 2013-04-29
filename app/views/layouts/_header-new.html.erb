@@ -1,11 +1,27 @@
 <div id="menu-top">
   <div id="logo-airesis">
-    <img class="logo1" src="img/logo.png">
+    <%= link_to image_tag('img/logo.png', :align => "left", :alt => 'Airesis - Democrazia Diretta', :style => 'padding-top:2px; width:200px'), root_path %>
   </div>
   <div class="sep1"></div>
   <div id="menu-group">
-    <img src="img/group.png">
-    <a class="tit" href="/">Gruppolo</a>
+    <h1 class="tit">
+      <% if @group %>
+          <%= @group.group_image_tag 40 %>
+
+      <% else %>
+          <%= image_tag 'logo120.png', :width => 120, :alt => APP_LONG_NAME %>
+      <% end %>
+      <% if @group %>
+          <% if @group.id %>
+              <%= @group.name %>
+          <% else %>
+              <%= t('pages.groups.index.groups_registration') %>
+          <% end %>
+      <% else %>
+          <%= t('pages.groups.index.groups_list_2') %>
+      <% end %>
+    </h1>
+
     <div id="submenu">
       <a href="/">LE PROPOSTE</a> -
       <a href="/">CALENDARIO</a> -
@@ -16,7 +32,7 @@
   <div id="logo-but">
     <span>GRUPPI</span>
     <br>
-    <img src="img/cur-tria.png">
+    <img src="/assets/img/cur-tria.png">
   </div>
 
   <div id="tolr">
@@ -25,13 +41,13 @@
       <span>-</span>
       <span>REGISTRATI</span>
     </div>
-    <img id="curinfo" src="img/cur-info.png" rel="page/info.html">
+    <img id="curinfo" src="/assets/img/cur-info.png" rel="page/info.html">
     <!--
             <span class="notify mess">4</span>
-            <img id="mess" src="img/mess.png" rel="page/mess.html">
+            <img id="mess" src="/assets/img/mess.png" rel="page/mess.html">
             <span class="notify world">2</span>
-            <img id="notify" src="img/world.png" rel="page/notify.html">
-            <img id="curbox" target="0" src="img/cur-box.png">
+            <img id="notify" src="/assets/img/world.png" rel="page/notify.html">
+            <img id="curbox" target="0" src="/assets/img/cur-box.png">
     -->
   </div>
 
@@ -41,48 +57,17 @@
     <div class="group-tag">
       <div class="tag sel"><span>Gruppi a cui partecipi</span><div class="tria"></div>
       </div>
-      <div class="tag">In attesa di accettazione</div>
-      <div class="tag">Apri un nuovo gruppo</div>
       <div class="tag">Cerca Gruppi</div>
+      <div class="tag">Apri un nuovo gruppo</div>
     </div>
     <div class="group-tag1">
       <div class="group-item">
-        <img src="img/logo/01.png">
+        <img src="/assets/img/logo/01.png">
         <span class="p1">Nome Del primo Gruppo</span>
         <div class="p2"><a href="/">PROPOSTE</a> - <a href="/">EVENTI</a></div>
       </div>
       <div class="group-item">
-        <img src="img/logo/02.png">
-        <span class="p1">Nome Di Questaltro Gruppo</span>
-        <div class="p2"><a href="/">PROPOSTE</a> - <a href="/">EVENTI</a></div>
-      </div>
-      <div class="group-item">
-        <img src="img/logo/03.png">
-        <span class="p1">Gruppo Fantastico</span>
-        <div class="p2"><a href="/">PROPOSTE</a> - <a href="/">EVENTI</a></div>
-      </div>
-      <div class="group-item">
-        <img src="img/logo/04.png">
-        <span class="p1">Tutti Per Uno Tutti Per Tutti</span>
-        <div class="p2"><a href="/">PROPOSTE</a> - <a href="/">EVENTI</a></div>
-      </div>
-      <div class="group-item">
-        <img src="img/logo/05.png">
-        <span class="p1">Da Non Perdere Questo</span>
-        <div class="p2"><a href="/">PROPOSTE</a> - <a href="/">EVENTI</a></div>
-      </div>
-      <div class="group-item">
-        <img src="img/logo/06.png">
-        <span class="p1">Magico Gruppo Di Raccolta</span>
-        <div class="p2"><a href="/">PROPOSTE</a> - <a href="/">EVENTI</a></div>
-      </div>
-      <div class="group-item">
-        <img src="img/logo/07.png">
-        <span class="p1">Nome Del primo Gruppo</span>
-        <div class="p2"><a href="/">PROPOSTE</a> - <a href="/">EVENTI</a></div>
-      </div>
-      <div class="group-item">
-        <img src="img/logo/08.png">
+        <img src="/assets/img/logo/02.png">
         <span class="p1">Nome Di Questaltro Gruppo</span>
         <div class="p2"><a href="/">PROPOSTE</a> - <a href="/">EVENTI</a></div>
       </div>
@@ -96,7 +81,7 @@
 <div id="menu-right" class="slim">
   <div class="cont">
 
-    <img id="avatar" src="img/avatar.png">
+    <img id="avatar" src="/assets/img/avatar.png">
 
     <div id="account"></div>
 
@@ -137,3 +122,13 @@
     </div>
   </div>
 </div>
+
+
+
+
+
+
+
+
+
+
